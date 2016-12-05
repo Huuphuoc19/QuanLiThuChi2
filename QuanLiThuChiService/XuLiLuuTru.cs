@@ -11,8 +11,6 @@ using System.Data.OleDb;
 namespace QuanLiThuChiService
 {
 
-    
-
     public enum CONG_NGHE_LUU_TRU
     {
         CSDL,
