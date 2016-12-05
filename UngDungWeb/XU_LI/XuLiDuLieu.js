@@ -6,6 +6,7 @@ ungDungQuanLiThuChi.controller("thongKeController", function ($scope, danhSachTh
     var vm = this;
     vm.idGiaDinh = 3;
     vm.idThuChiChung = 35;
+    vm.thuChiNam = [];
     // lay danh sach thong ke nam tu server thog qua lop xu li luu tru
     var danhSachThongKeNamXML = XuLiXML.phanTichChuoiTuWebseriveThanhString(danhSachThongKeNam);
     if (danhSachThongKeNamXML) {
@@ -13,7 +14,20 @@ ungDungQuanLiThuChi.controller("thongKeController", function ($scope, danhSachTh
     }
     vm.thuChiThang = [];
     vm.thuChiThanhVienNam = [];
-    vm.hienThiThongKeThang = function (nam, $event) {
+    $scope.tam = 1;
+    setTimeout(function () {
+        $scope.tam += 1;
+    }, 2500);
+
+    // xu li hien thi thong ke thang khi load xong du lieu
+    $scope.$watch("thongKeCtrl.thuChiNam", function (newValue, oldValue, scope) {
+        if (newValue[0]) {
+            var nam = newValue[0].Nam;
+            vm.hienThiThongKeThang(nam);
+        }
+    },true);
+
+    vm.hienThiThongKeThang = function (nam) {
         vm.thongTinThongKe = "(" + nam + ")";
         // lay thong ke thang theo nam
         XuLiLuuTru.layDanhSachThongKeThang(nam)
