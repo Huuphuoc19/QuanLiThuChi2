@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="layDanhSachThanhVien">
+        <s:complexType />
+      </s:element>
+      <s:element name="layDanhSachThanhVienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="layDanhSachThanhVienResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="themKhoanThuChi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chuoiDuLieuThuChi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="themKhoanThuChiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="themKhoanThuChiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thongKeTheoNam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="offset" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="limit" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thongKeTheoNamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thongKeTheoNamResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thongKeTheoThang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nam" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thongKeTheoThangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thongKeTheoThangResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thongKeThanhVienTheoNam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nam" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idGiaDinh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thongKeThanhVienTheoNamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thongKeThanhVienTheoNamResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thongKeThanhVienTheoThang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nam" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="thang" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idGiaDinh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thongKeThanhVienTheoThangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thongKeThanhVienTheoThangResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="timKiem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chuoiXmlDuLieuTimKiem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="timKiemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timKiemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="layIdThuChiChung">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idGiaDinh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="layIdThuChiChungResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="layIdThuChiChungResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="layDanhSachThanhVienSoapIn">
+    <wsdl:part name="parameters" element="tns:layDanhSachThanhVien" />
+  </wsdl:message>
+  <wsdl:message name="layDanhSachThanhVienSoapOut">
+    <wsdl:part name="parameters" element="tns:layDanhSachThanhVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="themKhoanThuChiSoapIn">
+    <wsdl:part name="parameters" element="tns:themKhoanThuChi" />
+  </wsdl:message>
+  <wsdl:message name="themKhoanThuChiSoapOut">
+    <wsdl:part name="parameters" element="tns:themKhoanThuChiResponse" />
+  </wsdl:message>
+  <wsdl:message name="thongKeTheoNamSoapIn">
+    <wsdl:part name="parameters" element="tns:thongKeTheoNam" />
+  </wsdl:message>
+  <wsdl:message name="thongKeTheoNamSoapOut">
+    <wsdl:part name="parameters" element="tns:thongKeTheoNamResponse" />
+  </wsdl:message>
+  <wsdl:message name="thongKeTheoThangSoapIn">
+    <wsdl:part name="parameters" element="tns:thongKeTheoThang" />
+  </wsdl:message>
+  <wsdl:message name="thongKeTheoThangSoapOut">
+    <wsdl:part name="parameters" element="tns:thongKeTheoThangResponse" />
+  </wsdl:message>
+  <wsdl:message name="thongKeThanhVienTheoNamSoapIn">
+    <wsdl:part name="parameters" element="tns:thongKeThanhVienTheoNam" />
+  </wsdl:message>
+  <wsdl:message name="thongKeThanhVienTheoNamSoapOut">
+    <wsdl:part name="parameters" element="tns:thongKeThanhVienTheoNamResponse" />
+  </wsdl:message>
+  <wsdl:message name="thongKeThanhVienTheoThangSoapIn">
+    <wsdl:part name="parameters" element="tns:thongKeThanhVienTheoThang" />
+  </wsdl:message>
+  <wsdl:message name="thongKeThanhVienTheoThangSoapOut">
+    <wsdl:part name="parameters" element="tns:thongKeThanhVienTheoThangResponse" />
+  </wsdl:message>
+  <wsdl:message name="timKiemSoapIn">
+    <wsdl:part name="parameters" element="tns:timKiem" />
+  </wsdl:message>
+  <wsdl:message name="timKiemSoapOut">
+    <wsdl:part name="parameters" element="tns:timKiemResponse" />
+  </wsdl:message>
+  <wsdl:message name="layIdThuChiChungSoapIn">
+    <wsdl:part name="parameters" element="tns:layIdThuChiChung" />
+  </wsdl:message>
+  <wsdl:message name="layIdThuChiChungSoapOut">
+    <wsdl:part name="parameters" element="tns:layIdThuChiChungResponse" />
+  </wsdl:message>
+  <wsdl:portType name="XuLiDichVuSoap">
+    <wsdl:operation name="layDanhSachThanhVien">
+      <wsdl:input message="tns:layDanhSachThanhVienSoapIn" />
+      <wsdl:output message="tns:layDanhSachThanhVienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="themKhoanThuChi">
+      <wsdl:input message="tns:themKhoanThuChiSoapIn" />
+      <wsdl:output message="tns:themKhoanThuChiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thongKeTheoNam">
+      <wsdl:input message="tns:thongKeTheoNamSoapIn" />
+      <wsdl:output message="tns:thongKeTheoNamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thongKeTheoThang">
+      <wsdl:input message="tns:thongKeTheoThangSoapIn" />
+      <wsdl:output message="tns:thongKeTheoThangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thongKeThanhVienTheoNam">
+      <wsdl:input message="tns:thongKeThanhVienTheoNamSoapIn" />
+      <wsdl:output message="tns:thongKeThanhVienTheoNamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thongKeThanhVienTheoThang">
+      <wsdl:input message="tns:thongKeThanhVienTheoThangSoapIn" />
+      <wsdl:output message="tns:thongKeThanhVienTheoThangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="timKiem">
+      <wsdl:input message="tns:timKiemSoapIn" />
+      <wsdl:output message="tns:timKiemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="layIdThuChiChung">
+      <wsdl:input message="tns:layIdThuChiChungSoapIn" />
+      <wsdl:output message="tns:layIdThuChiChungSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="XuLiDichVuSoap" type="tns:XuLiDichVuSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="layDanhSachThanhVien">
+      <soap:operation soapAction="http://tempuri.org/layDanhSachThanhVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="themKhoanThuChi">
+      <soap:operation soapAction="http://tempuri.org/themKhoanThuChi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thongKeTheoNam">
+      <soap:operation soapAction="http://tempuri.org/thongKeTheoNam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thongKeTheoThang">
+      <soap:operation soapAction="http://tempuri.org/thongKeTheoThang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thongKeThanhVienTheoNam">
+      <soap:operation soapAction="http://tempuri.org/thongKeThanhVienTheoNam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thongKeThanhVienTheoThang">
+      <soap:operation soapAction="http://tempuri.org/thongKeThanhVienTheoThang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timKiem">
+      <soap:operation soapAction="http://tempuri.org/timKiem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layIdThuChiChung">
+      <soap:operation soapAction="http://tempuri.org/layIdThuChiChung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="XuLiDichVuSoap12" type="tns:XuLiDichVuSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="layDanhSachThanhVien">
+      <soap12:operation soapAction="http://tempuri.org/layDanhSachThanhVien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="themKhoanThuChi">
+      <soap12:operation soapAction="http://tempuri.org/themKhoanThuChi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thongKeTheoNam">
+      <soap12:operation soapAction="http://tempuri.org/thongKeTheoNam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thongKeTheoThang">
+      <soap12:operation soapAction="http://tempuri.org/thongKeTheoThang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thongKeThanhVienTheoNam">
+      <soap12:operation soapAction="http://tempuri.org/thongKeThanhVienTheoNam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thongKeThanhVienTheoThang">
+      <soap12:operation soapAction="http://tempuri.org/thongKeThanhVienTheoThang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timKiem">
+      <soap12:operation soapAction="http://tempuri.org/timKiem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layIdThuChiChung">
+      <soap12:operation soapAction="http://tempuri.org/layIdThuChiChung" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="XuLiDichVu">
+    <wsdl:port name="XuLiDichVuSoap" binding="tns:XuLiDichVuSoap">
+      <soap:address location="http://localhost:59644/XuLiDichVu.asmx" />
+    </wsdl:port>
+    <wsdl:port name="XuLiDichVuSoap12" binding="tns:XuLiDichVuSoap12">
+      <soap12:address location="http://localhost:59644/XuLiDichVu.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

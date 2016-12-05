@@ -1,0 +1,47 @@
+﻿<div id="main" class="container">
+    <div id="messageError" class="col-md-offset-5 col-md-4 alert alert-danger" ng-show="thuCtrl.messages.length > 0">
+        <ul>
+            <li ng-repeat="message in thuCtrl.messages">{{message}}</li>
+        </ul>
+    </div>
+    <div id="form-search">
+        <div id="contain-form-levy" class="container">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-3 color-primary" for="number-levy">Thành viên</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="sel1" ng-model="thuCtrl.selectedThanhVien">
+                            <option ng-repeat="tv in thuCtrl.thanhVien" value="{{ tv.Id }}"
+                                    ng-selected="tv.Id == 35"
+                                    >{{ tv.HoTen }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 color-primary" for="number-levy">Số tiền thu</label>
+                    <div class="col-sm-9">
+                        <input ng-model="thuCtrl.soTien" type="text" class="form-control " id="number-levy" placeholder="Số tiền">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 color-primary" for="date-levy">Ngày tháng</label>
+                    <div class="col-sm-9">
+                        <input type="date" ng-model="thuCtrl.ngayThang" class="form-control" id="date-levy">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3 color-primary" for="note">Ghi chú</label>
+                    <div class="col-sm-9">
+                        <textarea ng-model="thuCtrl.ghiChu" class="form-control" rows="5" id="note" placeholder="Ghi chú"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button ng-click="thuCtrl.themThuChi()" type="submit" class="btn btn-success background-primary">Xác nhận</button>
+                        <button type="reset" class="btn btn-success background-primary">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

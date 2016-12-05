@@ -1,0 +1,53 @@
+﻿<div>
+    <div id="messageError" class="col-md-offset-5 col-md-4 alert alert-danger" ng-show="timkiemCtrl.messages.length > 0">
+        <ul>
+            <li ng-repeat="message in timkiemCtrl.messages">{{message}}</li>
+        </ul>
+    </div>
+    <div id="main" class="container">
+        <div id="form-search">
+            <div id="contain-form">
+                <input ng-model="timkiemCtrl.thanhVien" ng-keypress="timkiemCtrl.timKiemTheoThuocTinh($event)"
+                        type="text" name="" class="m-btn" placeholder="Thành viên" required />
+                <input ng-model="timkiemCtrl.soTien" ng-keypress="timkiemCtrl.timKiemTheoThuocTinh($event)"
+                        type="text" name="" class="m-btn" placeholder="Số tiền" required />
+                <input ng-model="timkiemCtrl.ngay" ng-keypress="timkiemCtrl.timKiemTheoThuocTinh($event)"
+                        type="text" name="" class="m-btn" placeholder="Ngày đầy đủ" required />
+                <input ng-model="timkiemCtrl.thang" ng-keypress="timkiemCtrl.timKiemTheoThuocTinh($event)"
+                        type="text" name="" class="m-btn" placeholder="Tháng" required />
+                <input ng-model="timkiemCtrl.loaiThuChi" ng-keypress="timkiemCtrl.timKiemTheoThuocTinh($event)"
+                        type="text" name="" class="m-btn" placeholder="Loại thu chi" required />
+            </div>
+            <div>
+                <button type="button" class="m-btn m-btn-click background-primary" id="btn-search" ng-click="timkiemCtrl.timKiem()">Tìm kiếm</button>
+                <button type="reset" class="m-btn m-btn-click background-primary" id="btn-search" ng-click="timkiemCtrl.resetForm();">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-search" class="container">
+        <div class="title-search">
+            <h1 class="color-primary">kết quả tìm kiếm </h1>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr id="result-search-title">
+                        <th>Họ Tên</th>
+                        <th>Số Tiền</th>
+                        <th>Ngày Thu Chi</th>
+                        <th>Ghi Chú</th>
+                    </tr>
+                </thead>
+                <tbody id="result-search-content">
+                    <tr id="result-search-title" ng-repeat="ketQua in timkiemCtrl.ketQuaTimKiem">
+                        <td>{{ (ketQua.ID == timkiemCtrl.idThuChiChung) ? "Thu chi chung" : ketQua.HoTen}}</td>
+                        <td>{{ ketQua.SoTien }}</td>
+                        <td>{{ ketQua.NgayThuChi | date: 'dd/MM/yyyy'}}</td>
+                        <td>{{ ketQua.GhiChu }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\bin\Debug\UngDungDesktop.exe.config
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\bin\Debug\UngDungDesktop.exe
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\bin\Debug\UngDungDesktop.pdb
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.csprojResolveAssemblyReference.cache
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.ManHinhChi.resources
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.ManHinhCoBan.resources
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.ManHinhThongKe.resources
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.ManHinhTimKiem.resources
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.Properties.Resources.resources
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.ManHinhThu.resources
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.csproj.GenerateResource.Cache
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.exe
+D:\VisualStudio\QuanLiThuChiService\UngDungDesktop\obj\Debug\UngDungDesktop.pdb

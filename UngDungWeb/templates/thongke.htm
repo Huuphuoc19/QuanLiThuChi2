@@ -1,0 +1,56 @@
+﻿<div id="main" class="">
+    <div id="list-year">
+        <!-- lap qua -->
+        <div ng-repeat="tcNam in thongKeCtrl.thuChiNam"
+             ng-class="{'col-md-offset-1':$index == 0}"
+              class="col-md-2 col-xs-12">
+            <div class="year">
+                <div class="year-link" href="#" ng-click="thongKeCtrl.hienThiThongKeThang(tcNam.Nam,$event)">
+                    <p class="year-title">{{ tcNam.Nam }}</p>
+                    <p><span>+</span>{{ tcNam.SoTienThu }}</p>
+                    <p><span>+</span>{{ tcNam.SoTienChi }}</p>
+                    <p><span>&#8658;</span>{{ tcNam.SoTienThu - tcNam.SoTienChi }}</p>
+                </div>
+                <input type="hidden" nam="{{ tcNam.Nam }}"
+                    sotienthu="{{ tcNam.SoTienThu }}" sotienchi="{{ tcNam.SoTienChi }}"/>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="contain">
+    <div class="col-md-3">
+
+        <div  class="year month" ng-repeat="tkThang in thongKeCtrl.thuChiThang track by $index">
+            <div class="year-link" ng-click="thongKeCtrl.hienThiThongKeThanhVienTheoThang(tkThang.Nam,tkThang.Thang)">
+                <p class="year-title month-title">Tháng {{tkThang.Thang}}/{{tkThang.Nam}}</p>
+                <p><span>+</span>{{tkThang.SoTienThu}}</p>
+                <p><span>-</span>{{tkThang.SoTienChi}}</p>
+                <p><span>&#8658;</span>{{tkThang.SoTienThu - tkThang.SoTienChi}}</p>
+            </div>
+            <input type="hidden" nam="{{ tkThang.Nam }}" thang="{{tkThang.Thang}}"
+                   sotienthu="{{ tkThang.SoTienThu }}" sotienchi="{{ tkThang.SoTienChi }}" />
+        </div>
+
+    </div>
+
+    <div class="col-md-9">
+        <div id="common" ng-repeat="thanhVien in thongKeCtrl.thuChiThanhVien" ng-if="thanhVien.ID == thongKeCtrl.idThuChiChung">
+            <p class="common-title ">Thu chi chung {{ thongKeCtrl.thongTinThongKe }}</p>
+            <p class="common-content"><span>+</span>{{ thanhVien.SoTienThu }}<span>-</span>{{ thanhVien.SoTienChi }}<span>&#8658;</span>{{ thanhVien.SoTienThu - thanhVien.SoTienChi }}</p>
+        </div>
+        <div id="separate">
+
+            <div class="year member" ng-repeat="thanhVien in thongKeCtrl.thuChiThanhVien" ng-if="thanhVien.ID != thongKeCtrl.idThuChiChung">
+                <div class="year-link" href="#">
+                    <p  class="year-title member-title">{{ thanhVien.HoTen }}</p>
+                    <p><span>+</span>{{ thanhVien.SoTienThu }}</p>
+                    <p><span>+</span>{{ thanhVien.SoTienChi }}</p>
+                    <p><span>&#8658;</span>{{ thanhVien.SoTienThu - thanhVien.SoTienChi }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
