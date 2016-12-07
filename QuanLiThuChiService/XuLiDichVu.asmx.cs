@@ -82,7 +82,7 @@ namespace QuanLiThuChiService
         }
 
         [WebMethod]
-
+        //<Data><ThuChi SoTien="" NgayThuChi="" LoaiThuChi="" GhiChu="" IdThanhVien="" /></Data>"
         public string timKiem(string chuoiXmlDuLieuTimKiem)
         {
 
@@ -106,10 +106,5 @@ namespace QuanLiThuChiService
             return kq;
         }
 
-        [WebMethod]
-        public string test(string data)
-        {
-            return data + "HELLO";
-        }
     }
 }

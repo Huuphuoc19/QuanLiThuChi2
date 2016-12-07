@@ -58,7 +58,6 @@ ungDungQuanLiThuChi.controller("thongKeController", function ($scope, danhSachTh
                 }
             });
     };
-
 });
 
 ungDungQuanLiThuChi.controller("thuController", function ($scope, dateFilter, danhSachThanhVien, XuLiXML, XuLiLuuTru, XuLiHienThi) {

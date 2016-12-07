@@ -68,7 +68,7 @@ namespace UngDungDesktop
             return kq;
         }
 
-        // goi service tim kiem
+        // dung trong truong hop nhieu gia dinh (khong sử dụng)
         public string layIdThuChiChung(int idGiaDinh)
         {
             string kq = "";
