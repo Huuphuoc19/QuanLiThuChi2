@@ -228,7 +228,6 @@ ungDungQuanLiThuChi.controller("timkiemController", function ($scope, XuLiXML, X
                     dump(error);
                 });
         }
-
     }
 
     // tim kiem tung tieu chi

@@ -164,3 +164,4 @@
 12/7/2016 9:15:47 PM: D:\VisualStudio\QuanLiThuChiService\Data\Log\
 12/7/2016 9:16:12 PM: D:\VisualStudio\QuanLiThuChiService\Data\Log\
 12/7/2016 9:16:16 PM: D:\VisualStudio\QuanLiThuChiService\Data\Log\
+12/7/2016 9:28:01 PM: D:\VisualStudio\QuanLiThuChiService\Data\Log\
