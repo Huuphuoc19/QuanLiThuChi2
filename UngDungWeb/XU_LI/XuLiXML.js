@@ -1,8 +1,8 @@
 ﻿/// <reference path="XuLiDuongDan.js" />
 ungDungQuanLiThuChi.factory("XuLiXML", function () {
 
-    var idGiaDinh = 3;
-    var idThuChiChung = 35;
+    var idGiaDinh = 1;
+    var idThuChiChung = 1;
     var THU_CHI_CHUNG = "THU CHI CHUNG";
     var parser = new DOMParser();
 

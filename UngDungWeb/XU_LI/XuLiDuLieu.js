@@ -4,8 +4,8 @@ ungDungQuanLiThuChi.controller("thongKeController", function ($scope, danhSachTh
 {
 
     var vm = this;
-    vm.idGiaDinh = 3;
-    vm.idThuChiChung = 35;
+    vm.idGiaDinh = 1;
+    vm.idThuChiChung = 1;
     vm.thuChiNam = [];
     // lay danh sach thong ke nam tu server thog qua lop xu li luu tru
     var danhSachThongKeNamXML = XuLiXML.phanTichChuoiTuWebseriveThanhString(danhSachThongKeNam);
@@ -159,8 +159,8 @@ ungDungQuanLiThuChi.controller("chiController", function ($scope, dateFilter, da
 ungDungQuanLiThuChi.controller("timkiemController", function ($scope, XuLiXML, XuLiLuuTru, XuLiHienThi) {
     var vm = this;
     // khoi tao bien
-    vm.idGiaDinh = 3;
-    vm.idThuChiChung = 35;
+    vm.idGiaDinh = 1;
+    vm.idThuChiChung = 1;
     //
     vm.thanhVien = "";
     vm.soTien = "";
@@ -214,19 +214,21 @@ ungDungQuanLiThuChi.controller("timkiemController", function ($scope, XuLiXML, X
                 IdGiaDinh: vm.idGiaDinh
             }
             var chuoiTimKiem = XuLiXML.taoChuoiTuObject(doiTuongTimKiem, "DuLieuThuChi");
-            dump(chuoiTimKiem);
+
             XuLiLuuTru.timKiem(chuoiTimKiem)
                 .then(function (data) {
                     var ketQua = XuLiXML.phanTichChuoiTuWebseriveThanhString(data);
                     if (ketQua) {
                         vm.ketQuaTimKiem = XuLiXML.taoMangObjectJSTuXMLElement(ketQua);
+                        if (vm.ketQuaTimKiem.length == 0) {
+                            vm.messages = ["Không tìm thấy"];
+                        }
                     }
                 }, function (error) {
                     dump(error);
                 });
         }
-        dump("Message:");
-        dump(vm.messages);
+
     }
 
     // tim kiem tung tieu chi

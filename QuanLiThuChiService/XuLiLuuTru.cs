@@ -762,7 +762,7 @@ namespace QuanLiThuChiService
         {
 
             // kiểm tra xem điều kiện nào không có thì không thêm vào
-            string sqlHoTen = (HoTen != "") ? "AND tv.HoTen = '" + HoTen + "' " : "";
+            string sqlHoTen = (HoTen != "") ? "AND tv.HoTen LIKE '%" + HoTen + "%' " : "";
             string sqlNgay = (Ngay != "") ? "AND tc.NgayThuChi = #" + Ngay + "# " : "";
             string sqlThang = "";
             if(Thang != "")

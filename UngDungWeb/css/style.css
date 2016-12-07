@@ -75,12 +75,17 @@ html *{
 }
 
 #messageError{
+    position: absolute;
     margin-top: 10px;
 }
 
 #messageError > ul{
     padding-left: 10px;
     list-style-type: square;
+}
+
+#messageError > ul > li:not(:first-child){
+    margin-top: 5px;
 }
 
 .login {

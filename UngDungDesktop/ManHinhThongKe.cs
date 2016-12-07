@@ -179,8 +179,8 @@ namespace UngDungDesktop
             string content = " " + thanhVien + "\r\n+ " + thu + "\r\n-  " + chi + "\r\n⇒" + chechLech.ToString();
             btn.Text = content;
             btn.Name = btn.Name = "btn" + thanhVien;
-            btn.Width = 115;
-            btn.Height = 100;
+            btn.Width = 150;
+            btn.Height = 110;
             btn.Location = new Point(left, 0);
             left += btn.Width + 20;
             btn.TextAlign = ContentAlignment.TopLeft;

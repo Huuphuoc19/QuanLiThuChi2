@@ -16,7 +16,7 @@ namespace UngDungDesktop
 
         protected XuLiHienThi xuLiHienThi = new XuLiHienThi();
         protected XuLiXml xuLiXml = new XuLiXml();
-        protected int idGiaDinh = 3;
+        protected int idGiaDinh = 1;
         protected const string hienThiThuChiChung = "THU CHI CHUNG";
 
         protected string[] thuocTinhThuChi = new string[]
